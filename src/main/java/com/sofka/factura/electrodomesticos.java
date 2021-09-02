@@ -60,6 +60,10 @@ public class electrodomesticos {
         }
         return this.precio;
     }
+
+    public double getPrecio() {
+        return precio;
+    }
 }
 
 class Nevera extends electrodomesticos{
@@ -82,13 +86,14 @@ class Nevera extends electrodomesticos{
     public double valorExtra(double precio){
         if (this.capacidad > 120){
             int extra = (this.capacidad - 120) / 10;
-            return precio * 0.05 * (extra);
+            System.out.println(precio);
+            return precio * 0.05 * extra;
         }
         else{return 0.00;}
     }
 
     public double calcularPrecio(){
-        return super.calcularPrecio() + valorExtra(super.calcularPrecio());
+        return super.calcularPrecio() + valorExtra(getPrecio());
     }
 
 }
