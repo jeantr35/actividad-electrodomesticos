@@ -33,6 +33,14 @@ public class electrodomesticos {
         return procedencia;
     }
 
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
     public double calcularPrecio(){
         switch (this.consumo){
             case 'A': {

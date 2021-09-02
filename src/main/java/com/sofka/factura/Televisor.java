@@ -20,13 +20,18 @@ public class Televisor extends electrodomesticos{
     public void setTDT(boolean TDT) {
         this.TDT = TDT;
     }
-    public void calcularPrecio(boolean esTDT, int tamanoPulgadas) {
+    public double calcularPrecio(){
+        return super.calcularPrecio() + impuesto(this.TDT, this.pulgadas);
+    }
+    public double impuesto(boolean esTDT, int tamanoPulgadas) {
+        precio = super.getPrecio();
         if(esTDT == true){
-            this.precio += 250000;
+            precio += 250000;
         }
         if(tamanoPulgadas > 40){
-            this.precio += this.precio * 0.3;
+            precio += this.precio * 0.3;
         }
+        return precio;
     }
 }
 
