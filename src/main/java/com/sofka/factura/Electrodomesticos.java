@@ -1,17 +1,17 @@
 package com.sofka.factura;
 
-public class electrodomesticos {
+public class Electrodomesticos {
     char consumo;
     String procedencia;
     double precio;
 
-    public electrodomesticos() {
+    public Electrodomesticos() {
         this.consumo = 'A';
         this.procedencia = "nacional";
         this.precio = 0.00;
     }
 
-    public electrodomesticos(char consumo, String procedencia) {
+    public Electrodomesticos(char consumo, String procedencia) {
         this.consumo = consumo;
         this.procedencia = procedencia;
         this.precio = 0.00;
@@ -59,5 +59,9 @@ public class electrodomesticos {
             }
         }
         return this.precio;
+    }
+
+    public double getPrecio() {
+        return precio;
     }
 }
