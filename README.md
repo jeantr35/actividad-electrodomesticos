@@ -1,1 +1,1 @@
-# actividad-electrodomesticos
+# actividad-com.sofka.factura.electrodomesticos
