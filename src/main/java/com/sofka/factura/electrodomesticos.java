@@ -1,3 +1,5 @@
+package com.sofka.factura;
+
 public class electrodomesticos {
     char consumo;
     String procedencia;
