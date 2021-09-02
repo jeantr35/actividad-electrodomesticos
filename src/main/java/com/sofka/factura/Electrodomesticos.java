@@ -1,17 +1,17 @@
 package com.sofka.factura;
 
-public class electrodomesticos {
+public class Electrodomesticos {
     char consumo;
     String procedencia;
     double precio;
 
-    public electrodomesticos() {
+    public Electrodomesticos() {
         this.consumo = 'A';
         this.procedencia = "nacional";
         this.precio = 0.00;
     }
 
-    public electrodomesticos(char consumo, String procedencia) {
+    public Electrodomesticos(char consumo, String procedencia) {
         this.consumo = consumo;
         this.procedencia = procedencia;
         this.precio = 0.00;
@@ -64,36 +64,4 @@ public class electrodomesticos {
     public double getPrecio() {
         return precio;
     }
-}
-
-class Nevera extends electrodomesticos{
-    int capacidad;
-
-    public Nevera(char consumo, String procedencia, int capacidad) {
-        this.consumo = consumo;
-        this.procedencia = procedencia;
-        this.capacidad = capacidad;
-    }
-
-    public int getCapacidad() {
-        return capacidad;
-    }
-
-    public void setCapacidad(int capacidad) {
-        this.capacidad = capacidad;
-    }
-
-    public double valorExtra(double precio){
-        if (this.capacidad > 120){
-            int extra = (this.capacidad - 120) / 10;
-            System.out.println(precio);
-            return precio * 0.05 * extra;
-        }
-        else{return 0.00;}
-    }
-
-    public double calcularPrecio(){
-        return super.calcularPrecio() + valorExtra(getPrecio());
-    }
-
 }
