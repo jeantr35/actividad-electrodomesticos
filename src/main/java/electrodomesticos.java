@@ -46,7 +46,6 @@ public class electrodomesticos {
                 break;
             }
         }
-
         switch (procedencia){
             case "nacional":{
                 this.precio += 250000;
