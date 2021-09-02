@@ -6,8 +6,8 @@ public class electrodomesticos {
     double precio;
 
     public electrodomesticos() {
-        this.consumo = 'A';
-        this.procedencia = "nacional";
+        this.consumo = ' ';
+        this.procedencia = "";
         this.precio = 0.00;
     }
 
