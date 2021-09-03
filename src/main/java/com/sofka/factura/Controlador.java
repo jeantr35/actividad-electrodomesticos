@@ -31,7 +31,21 @@ public class Controlador {
         }
         return tdt;
     }
+        public double seleccionNevera{
 
+        char consumo; String procedencia; int capacidad; double precio;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese el consumo (A,B,C): ");
+        consumo = scanner.next().charAt(0);
+        System.out.println("Ingrese la procedencia (nacional,importado): ");
+        procedencia = scanner.next();
+        System.out.println("Ingrese la capacidad (lt): ");
+        capacidad = scanner.nextInt();
+        Nevera nevera = new Nevera(consumo, procedencia, capacidad);
+        precio = nevera.calcularPrecio();
+
+        return precio;
+    }
     public double seleccionElectrodomesticos(){
 
         char consumo; String procedencia; double precio;
