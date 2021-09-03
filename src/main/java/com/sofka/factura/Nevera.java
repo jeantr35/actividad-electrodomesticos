@@ -3,9 +3,11 @@ package com.sofka.factura;
 class Nevera extends Electrodomesticos {
     int capacidad;
 
-    public Nevera(char consumo, String procedencia, int capacidad) {
-        this.consumo = consumo;
-        this.procedencia = procedencia;
+
+
+
+    public Nevera(char consumo, String procedencia, int capacidad){
+        super(consumo, procedencia);
         this.capacidad = capacidad;
     }
 
