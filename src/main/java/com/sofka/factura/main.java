@@ -50,7 +50,7 @@ public class main {
 
         }
 
-        System.out.print("El costo total de su producto es de: " + precioTotal);
+        System.out.print("El costo total de sus productos es de: " + precioTotal);
 
 
     }
