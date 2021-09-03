@@ -23,9 +23,9 @@ public class main {
         String procedencia = scanner.next();
 
         switch (tipoElectro){
-            case '1': controlador.seleccionTelevisor();
-//            case '2': controlador.seleccionNevera();
-            case '3': controlador.seleccionElectrodomesticos();
+            case '1': controlador.seleccionTelevisor(consumo, procedencia);
+            case '2': controlador.seleccionNevera(consumo, procedencia);
+            case '3': controlador.seleccionElectrodomesticos(consumo, procedencia);
         }
     }
 }

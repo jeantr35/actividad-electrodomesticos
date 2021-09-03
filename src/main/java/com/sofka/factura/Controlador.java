@@ -3,14 +3,10 @@ package com.sofka.factura;
 import java.util.Scanner;
 
 public class Controlador {
-    public double seleccionTelevisor() {
+    public double seleccionTelevisor(char consumo, String procedencia) {
 
-        char consumo; String procedencia; int pulgadas; double precio;
+        int pulgadas; double precio;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingrese el consumo (A,B,C): ");
-        consumo = scanner.next().charAt(0);
-        System.out.println("Ingrese la procedencia (nacional,importado): ");
-        procedencia = scanner.next();
         System.out.println("Ingrese las pulgadas: ");
         pulgadas = scanner.nextInt();
         System.out.println("¿Tiene sintonizador de TDT? (si/no)");
@@ -31,14 +27,10 @@ public class Controlador {
         }
         return tdt;
     }
-        public double seleccionNevera{
+        public double seleccionNevera(char consumo, String procedencia){
 
-        char consumo; String procedencia; int capacidad; double precio;
+        int capacidad; double precio;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingrese el consumo (A,B,C): ");
-        consumo = scanner.next().charAt(0);
-        System.out.println("Ingrese la procedencia (nacional,importado): ");
-        procedencia = scanner.next();
         System.out.println("Ingrese la capacidad (lt): ");
         capacidad = scanner.nextInt();
         Nevera nevera = new Nevera(consumo, procedencia, capacidad);
@@ -46,14 +38,10 @@ public class Controlador {
 
         return precio;
     }
-    public double seleccionElectrodomesticos(){
+    public double seleccionElectrodomesticos(char consumo, String procedencia){
 
-        char consumo; String procedencia; double precio;
+        double precio;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingrese el consumo (A,B,C): ");
-        consumo = scanner.next().charAt(0);
-        System.out.println("Ingrese la procedencia (nacional,importado): ");
-        procedencia = scanner.next();
         Electrodomesticos electrodomestico = new Electrodomesticos(consumo,procedencia);
         precio = electrodomestico.calcularPrecio();
 
