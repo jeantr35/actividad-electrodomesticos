@@ -27,27 +27,30 @@ public class main {
                 case '1':
                     precioItem = controlador.seleccionTelevisor(consumo, procedencia);
                     precioTotal += precioItem;
-                    System.out.println(precioItem);
+                    System.out.print("El precio de este item es de: " + precioItem + "\n");
                     break;
                 case '2':
                     precioItem = controlador.seleccionNevera(consumo,procedencia);
                     precioTotal += precioItem;
-                    System.out.println(precioItem);
+                    System.out.print("El precio de este item es de: " + precioItem + "\n");
                     break;
                 case '3':
                     precioItem = controlador.seleccionElectrodomesticos(consumo,procedencia);
                     precioTotal += precioItem;
-                    System.out.println(precioItem);
+                    System.out.print("El precio de este item es de: " + precioItem + "\n");
                     break;
             }
 
             System.out.print("Desea finalizar?:\n" +
                     "1) Si \n" +
-                    "2) No");
+                    "2) No\n" +
+                    "");
             char decision = scanner.next().charAt(0);
             if (decision == '1'){salir=true;}
 
         }
+
+        System.out.print("El costo total de su producto es de: " + precioTotal);
 
 
     }
