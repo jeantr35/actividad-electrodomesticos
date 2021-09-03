@@ -5,12 +5,6 @@ public class Electrodomesticos {
     String procedencia;
     double precio;
 
-    public Electrodomesticos() {
-        this.consumo = 'A';
-        this.procedencia = "nacional";
-        this.precio = 0.00;
-    }
-
     public Electrodomesticos(char consumo, String procedencia) {
         this.consumo = consumo;
         this.procedencia = procedencia;
