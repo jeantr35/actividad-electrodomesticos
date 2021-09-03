@@ -10,19 +10,19 @@ public class Controlador {
         System.out.println("Ingrese las pulgadas: ");
         pulgadas = scanner.nextInt();
         System.out.println("¿Tiene sintonizador de TDT? (si/no)");
-        String esTDT = scanner.next();
+        char esTDT = scanner.next().charAt(0);
         boolean tdt = tieneSintonizador(esTDT);
         Televisor televisor = new Televisor(consumo, procedencia, pulgadas, tdt);
         precio = televisor.calcularPrecio();
 
         return precio;
     }
-    public boolean tieneSintonizador(String esTDT){
+    public boolean tieneSintonizador(char esTDT){
 
         boolean tdt = false;
-        if (esTDT == "si") {
+        if (esTDT == 's') {
             tdt = true;
-        } else if (esTDT == "no") {
+        } else if (esTDT == 'n') {
             tdt = false;
         }
         return tdt;
